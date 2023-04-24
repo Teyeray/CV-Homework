@@ -1,0 +1,7 @@
+from PIL import Image
+img = Image.open("/Users/yangruiming/Desktop/matlab files/hehua.bmp")
+img.show()
+
+##线性运算
+out = img.point(lambda i: i * 3.0)
+out.show()
