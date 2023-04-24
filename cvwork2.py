@@ -46,17 +46,23 @@ def compound_transform(img, dx, dy, mirror_direction, angle):
 
 # 平移图片
 img_trans = translate(img, 50, 50)
-img_trans.save('trans.png')
+#img_trans.save('trans.png')
 
 # 镜像图片
 img_mirror = mirror(img, 'horizontal')
-img_mirror.save('mirror.png')
+#img_mirror.save('mirror.png')
 
 # 旋转图片
 import math
 img_rot = rotate(img, math.pi/6)
-img_rot.save('rotate.png')
+#img_rot.save('rotate.png')
 
 # 复合变换
 img_compound = compound_transform(img, 50, 50, 'horizontal', math.pi/6)
-img_compound.save('compound.png')
+#img_compound.save('compound.png')
+
+
+#显示图片
+img_trans.show()
+img_mirror.show()
+img_compound.show()
